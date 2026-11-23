@@ -8,7 +8,7 @@ A compact text-only sample containing headings, emphasis, lists, a table, and sp
 ## 1. Overview
 This document is a small synthetic test fixture for evaluating how a PDF extraction pipeline preserves document structure. It intentionally combines several common formatting features in a short, readable layout.
 
-A good parser should retain the distinction between bold text, italic text, underlined text, and ordinary text. It should also recognize headings and avoid merging unrelated paragraphs.
+A good parser should retain the distinction between **bold text**, *italic text*, <u>underlined text</u>, and ordinary text. It should also recognize headings and avoid merging unrelated paragraphs.
 
 ## 2. Unordered and Ordered Lists
 The following list contains three independent items:
@@ -37,7 +37,7 @@ The table below includes a header row, numeric values, and a final summary row.
 
 Inline tokens: `parser_version = 1.4.2; confidence = 0.975; file_name = sample_input.pdf.`
 
-***
+---
 
 # PDF-to-Markdown test fixture
 
