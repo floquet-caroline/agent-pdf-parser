@@ -3,3 +3,4 @@
 __pycache__
 bronze/raw/facture*.pdf
 bronze/parsed/facture*.md
+silver/factures*.parquet
