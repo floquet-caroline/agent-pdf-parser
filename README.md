@@ -16,5 +16,5 @@ Its goal was to create a pipeline involving AI agents to parse, store and extrac
 
 ### PDF to md
 
-This brick consists in parsing PDF files found in the `bronze` folder into md files saved into the `silver` folder. 
-The layer works but still needs to be linked to the distant storage available on the cloud.
+This brick consists in parsing PDF files found in the `bronze/raw` folder into md files saved into the `bronze/parsed` folder. 
+The layer includes a loader component that allows us to load and send data to the S3 bucket.

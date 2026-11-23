@@ -1,6 +1,6 @@
 import load_bucket as lb
 
-BRONZE_ZONE = "bronze/"
+BRONZE_ZONE = "bronze/raw"
 SILVER_ZONE = "silver/"
 GOLD_ZONE = "gold/"
 

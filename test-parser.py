@@ -2,8 +2,8 @@ import os
 import glob
 import pdf2md
 
-INPUT_ZONE = "bronze/"
-OUTPUT_ZONE = "silver/"
+INPUT_ZONE = "bronze/raw"
+OUTPUT_ZONE = "bronze/parsed"
 
 # Get all files from input zone as a list
 pdf_files = glob.glob(os.path.join(INPUT_ZONE, "p*.pdf"))
