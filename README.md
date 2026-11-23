@@ -25,5 +25,5 @@ This brick is also part of the bronze layer. Its goal is to compile the md files
 
 ## Use project
 
-To use the project, launch `main-pipeline.py` and it should process every PDF and send the parquet file back to S3.
+To use the project, use a venv environment and run `pip install -r requirements.txt`, then launch `main-pipeline.py` and it should process every PDF and send the parquet file back to S3.
 The upload currently doesn't work for me because of S3 authentication that I didn't have the time to solve.
