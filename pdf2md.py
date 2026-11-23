@@ -9,7 +9,7 @@ load_dotenv()
 api_key = os.getenv("API_KEY")
 
 client = OpenAI(
-    base_url="https://my-cloud-service-url/gemma-4-12b/v1", 
+    base_url="https://llm.hyperfluid.cloud/v1/organizations/ebc6b7a8-9ecd-4d3d-bafc-fef40ebe986f/shared-models/gemma-4-12b/v1", 
     api_key=api_key
 )
 
