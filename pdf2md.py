@@ -7,10 +7,16 @@ import base64
 # Load environment variables and initialize the client
 load_dotenv()
 api_key = os.getenv("API_KEY")
+api_key2 = os.getenv("API_KEY2")
 
 client = OpenAI(
     base_url="https://llm.hyperfluid.cloud/v1/organizations/ebc6b7a8-9ecd-4d3d-bafc-fef40ebe986f/shared-models/gemma-4-12b/v1", 
     api_key=api_key
+)
+
+client2 = OpenAI(
+    base_url="https://llm.hyperfluid.cloud/v1/organizations/ebc6b7a8-9ecd-4d3d-bafc-fef40ebe986f/shared-models/lightonocr-3-1b-test/v1", 
+    api_key=api_key2
 )
 
 # Infer the type of a PDF file (text-based or image-based)
@@ -27,8 +33,7 @@ def parse_pdf_with_endpoints(pdf_path: str) -> str:
     
     if pdf_type == "image_based":
         print(f"[{pdf_path}] Detected as image-based. Routing to OCR (lighton3)...")
-        # Add your lighton3 OCR logic here
-        markdown_result = "[OCR placeholder output]"
+        markdown_result = call_lighton_ocr(pdf_path)
     else:
         print(f"[{pdf_path}] Detected as text-based. Routing to gemma-4-12b parser...")
         raw_text = extract_raw_text(pdf_path)
@@ -80,7 +85,7 @@ def call_lighton_ocr(pdf_path: str) -> str:
         base64_image = convert_pdf_page_to_base64_image(page)
         
         # Standard multimodal chat completion format often used for vision/OCR models
-        response = client.chat.completions.create(
+        response = client2.chat.completions.create(
             model="lightonocr-3-1b-test",
             messages=[
                 {

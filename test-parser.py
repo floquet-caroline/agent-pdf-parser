@@ -6,7 +6,7 @@ INPUT_ZONE = "bronze/"
 OUTPUT_ZONE = "silver/"
 
 # Get all files from input zone as a list
-pdf_files = glob.glob(os.path.join(INPUT_ZONE, "*.pdf"))
+pdf_files = glob.glob(os.path.join(INPUT_ZONE, "p*.pdf"))
 
 
 for file_path in pdf_files:
